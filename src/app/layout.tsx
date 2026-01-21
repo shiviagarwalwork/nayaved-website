@@ -1,0 +1,43 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Ayurveda for Real Life - Ancient Wisdom for Digital Age",
+  description: "Making 5,000-year-old Ayurvedic knowledge relevant for screen addiction, sensory overload, and modern mental health challenges. Based on Charaka Samhita.",
+  keywords: ["Ayurveda", "digital detox", "screen addiction", "Charaka Samhita", "mental health", "anxiety", "dosha", "wellness"],
+  authors: [{ name: "Ayurveda Knowledge Portal" }],
+  openGraph: {
+    title: "Ayurveda for Real Life",
+    description: "Ancient wisdom that actually makes sense for your digital life",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
+}

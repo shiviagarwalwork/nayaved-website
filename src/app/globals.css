@@ -1,0 +1,523 @@
+@import "tailwindcss";
+
+:root {
+  /* Manuscript-inspired Parchment Palette */
+  --parchment: #F5EFE0;
+  --parchment-light: #FAF7F0;
+  --parchment-dark: #E8DCC4;
+  --palm-leaf: #D4C5A9;
+
+  /* Ancient Ink Colors - Enhanced for readability */
+  --ink-black: #1A150D;
+  --ink-brown: #3D2B1F;
+  --faded-ink: #5A4A3A;
+
+  /* Natural Pigment Accents */
+  --vermillion: #C7522A;
+  --turmeric: #E5B80B;
+  --saffron: #F4C430;
+  --indigo: #4B6B8A;
+  --henna: #A0522D;
+
+  /* Decorative Metallics */
+  --gold-leaf: #D4AF37;
+  --copper-brown: #B87333;
+  --antique-gold: #CFB53B;
+
+  /* Functional Colors */
+  --success: #6B8E23;
+  --warning: #E5B80B;
+  --error: #C7522A;
+
+  /* Legacy variables for compatibility */
+  --background: var(--parchment);
+  --foreground: var(--ink-black);
+  --card-bg: var(--parchment-light);
+  --card-bg-light: #FFFFFF;
+  --accent-primary: var(--copper-brown);
+  --accent-secondary: var(--gold-leaf);
+  --accent-tertiary: var(--saffron);
+  --text-muted: var(--faded-ink);
+  --border-color: var(--palm-leaf);
+  --gold: var(--gold-leaf);
+  --olive: var(--success);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment) 50%, var(--parchment-dark) 100%);
+  background-attachment: fixed;
+  color: var(--ink-black);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  position: relative;
+  min-height: 100vh;
+  font-weight: 450;
+  letter-spacing: 0.01em;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle paper texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-black);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.8;
+  color: var(--ink-brown);
+}
+
+/* Improved readability for smaller text */
+.text-xs, .text-sm {
+  font-weight: 500;
+}
+
+/* Ensure good contrast on light backgrounds */
+small, .text-muted {
+  color: var(--faded-ink);
+  font-weight: 500;
+}
+
+/* Elegant Manuscript Card */
+.manuscript-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, var(--parchment-light) 100%);
+  border: 2px solid var(--palm-leaf);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 20px rgba(45, 36, 22, 0.08),
+    0 1px 3px rgba(45, 36, 22, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.manuscript-card:hover {
+  border-color: var(--gold-leaf);
+  box-shadow:
+    0 8px 30px rgba(212, 175, 55, 0.15),
+    0 2px 8px rgba(45, 36, 22, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Gold accent border top */
+.manuscript-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-leaf), transparent);
+  border-radius: 0 0 4px 4px;
+}
+
+/* Decorative corner ornaments */
+.corner-ornament {
+  position: relative;
+}
+
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '❖';
+  position: absolute;
+  font-size: 1rem;
+  color: var(--gold-leaf);
+  opacity: 0.6;
+}
+
+.corner-ornament::before {
+  top: 8px;
+  left: 8px;
+}
+
+.corner-ornament::after {
+  bottom: 8px;
+  right: 8px;
+}
+
+/* Elegant Button Styles */
+.elegant-button {
+  background: linear-gradient(135deg, var(--copper-brown) 0%, var(--henna) 100%);
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 15px rgba(184, 115, 51, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.elegant-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 25px rgba(184, 115, 51, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.elegant-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.elegant-button:hover::before {
+  left: 100%;
+}
+
+/* Secondary Button */
+.elegant-button-secondary {
+  background: transparent;
+  border: 2px solid var(--copper-brown);
+  color: var(--copper-brown);
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.elegant-button-secondary:hover {
+  background: var(--copper-brown);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Parchment Card (Legacy Support) */
+.parchment-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, var(--parchment-light) 100%);
+  border: 2px solid var(--palm-leaf);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 20px rgba(45, 36, 22, 0.08),
+    0 1px 3px rgba(45, 36, 22, 0.05);
+  position: relative;
+}
+
+/* Ancient Button (Legacy Support) */
+.ancient-button {
+  background: linear-gradient(135deg, var(--copper-brown) 0%, var(--henna) 100%);
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(184, 115, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ancient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(184, 115, 51, 0.4);
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 35px rgba(45, 36, 22, 0.12),
+    0 0 0 1px var(--gold-leaf);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--copper-brown) 0%, var(--gold-leaf) 50%, var(--copper-brown) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.7));
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.chakra-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(45, 36, 22, 0.15);
+}
+
+/* Elegant Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--parchment);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--palm-leaf) 0%, var(--copper-brown) 100%);
+  border-radius: 10px;
+  border: 2px solid var(--parchment);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--copper-brown) 0%, var(--henna) 100%);
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid var(--parchment-dark);
+  border-top: 3px solid var(--gold-leaf);
+  border-right: 3px solid var(--copper-brown);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1.2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Markdown Content Styling */
+.markdown-content h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  color: var(--ink-black);
+  border-bottom: 2px solid var(--gold-leaf);
+  padding-bottom: 0.5em;
+}
+
+.markdown-content h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  color: var(--ink-brown);
+}
+
+.markdown-content h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  color: var(--ink-black);
+}
+
+.markdown-content strong {
+  font-weight: 700;
+  color: var(--ink-black);
+}
+
+.markdown-content ul {
+  list-style-type: none;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.markdown-content li::before {
+  content: '❖';
+  position: absolute;
+  left: 0;
+  color: var(--gold-leaf);
+  font-size: 0.75em;
+  top: 0.25em;
+}
+
+/* Section Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--palm-leaf), var(--gold-leaf), var(--palm-leaf), transparent);
+  margin: 2rem 0;
+}
+
+/* Decorative Quote Box */
+.quote-box {
+  background: linear-gradient(145deg, var(--parchment-light) 0%, var(--parchment) 100%);
+  border-left: 4px solid var(--gold-leaf);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--ink-brown);
+}
+
+.quote-box::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--gold-leaf);
+  opacity: 0.3;
+  position: absolute;
+  margin-top: -1rem;
+  margin-left: -0.5rem;
+}
+
+/* Tag/Badge Styles */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--parchment-dark);
+  color: var(--ink-brown);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--palm-leaf);
+}
+
+.tag-gold {
+  background: linear-gradient(135deg, var(--saffron) 0%, var(--gold-leaf) 100%);
+  color: var(--ink-black);
+  border: none;
+}
+
+/* Input Styles */
+input, textarea, select {
+  background: #FFFFFF;
+  border: 2px solid var(--palm-leaf);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: 'Georgia', serif;
+  color: var(--ink-black);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold-leaf);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: var(--ink-black);
+}
