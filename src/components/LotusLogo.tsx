@@ -9,13 +9,31 @@ interface LotusLogoProps {
 
 export default function LotusLogo({ size = 40, className = '' }: LotusLogoProps) {
   return (
-    <Image
-      src="/images/Nayaved-Logo-Cropped.png"
-      alt="NayaVed Logo"
-      width={size * 1.5}
-      height={size * 1.5}
+    <div
+      style={{
+        width: size * 1.5,
+        height: size * 1.5,
+        overflow: 'hidden',
+        borderRadius: '8px',
+        backgroundColor: 'var(--parchment-light, #FFF8E7)',
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        paddingTop: '4px'
+      }}
       className={className}
-      style={{ objectFit: 'contain' }}
-    />
+    >
+      <Image
+        src="/images/Nayaved Logo.png"
+        alt="NayaVed Logo"
+        width={size * 2.5}
+        height={size * 2.5}
+        style={{
+          objectFit: 'contain',
+          objectPosition: 'top center',
+          marginTop: '-2%'
+        }}
+      />
+    </div>
   );
 }
