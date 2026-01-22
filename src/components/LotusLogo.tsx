@@ -10,10 +10,10 @@ interface LotusLogoProps {
 export default function LotusLogo({ size = 40, className = '' }: LotusLogoProps) {
   return (
     <Image
-      src="/images/Nayaved.png"
-      alt="NayaVed Logo"
-      width={size * 2}
-      height={size * 2}
+      src="/images/Nayavednew.png"
+      alt="NayaVed AI Logo"
+      width={size}
+      height={size}
       className={className}
       style={{ objectFit: 'contain' }}
     />

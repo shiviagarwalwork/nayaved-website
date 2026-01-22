@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">Introduction</h2>
               <p>
-                Welcome to NayaVed ("we," "our," or "us"). We are committed to protecting your privacy and personal information.
+                Welcome to NayaVed AI ("we," "our," or "us"). We are committed to protecting your privacy and personal information.
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our
                 mobile application and website (collectively, the "Services").
               </p>
@@ -145,7 +145,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">Medical Disclaimer</h2>
               <p className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-                <strong>Important:</strong> NayaVed provides general wellness information based on Ayurvedic principles.
+                <strong>Important:</strong> NayaVed AI provides general wellness information based on Ayurvedic principles.
                 Our Services are for educational purposes only and are not intended to diagnose, treat, cure, or prevent
                 any disease. Always consult with a qualified healthcare provider before making any health-related decisions
                 or changes to your diet or lifestyle.

@@ -18,7 +18,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">1. Acceptance of Terms</h2>
               <p>
-                Welcome to NayaVed. By accessing or using our mobile application and website (collectively, the "Services"),
+                Welcome to NayaVed AI. By accessing or using our mobile application and website (collectively, the "Services"),
                 you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do
                 not use our Services.
               </p>
@@ -31,7 +31,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">2. Description of Services</h2>
               <p>
-                NayaVed provides educational content and wellness information based on traditional Ayurvedic principles.
+                NayaVed AI provides educational content and wellness information based on traditional Ayurvedic principles.
                 Our Services include:
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-2">
@@ -46,7 +46,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">3. Medical Disclaimer</h2>
               <p className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-                <strong>IMPORTANT:</strong> NayaVed is NOT a medical device and is NOT intended to diagnose, treat, cure,
+                <strong>IMPORTANT:</strong> NayaVed AI is NOT a medical device and is NOT intended to diagnose, treat, cure,
                 or prevent any disease or health condition. The information provided through our Services is for
                 educational and informational purposes only.
               </p>
@@ -56,7 +56,7 @@ export default function TermsOfService() {
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 <li>Consult with a qualified healthcare provider before making any health-related decisions</li>
                 <li>Seek professional medical advice for any health concerns or symptoms</li>
-                <li>Not rely solely on NayaVed for medical diagnosis or treatment decisions</li>
+                <li>Not rely solely on NayaVed AI for medical diagnosis or treatment decisions</li>
                 <li>Continue any prescribed treatments or medications as directed by your healthcare provider</li>
               </ul>
               <p className="mt-4">
@@ -98,7 +98,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">6. Intellectual Property</h2>
               <p>
                 All content, features, and functionality of our Services, including but not limited to text, graphics,
-                logos, icons, images, audio clips, and software, are the exclusive property of NayaVed or its licensors
+                logos, icons, images, audio clips, and software, are the exclusive property of NayaVed AI or its licensors
                 and are protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p className="mt-4">
@@ -115,7 +115,7 @@ export default function TermsOfService() {
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 <li>
-                  NayaVed and its affiliates, officers, employees, agents, and licensors shall not be liable for any
+                  NayaVed AI and its affiliates, officers, employees, agents, and licensors shall not be liable for any
                   indirect, incidental, special, consequential, or punitive damages arising out of or relating to your
                   use of the Services.
                 </li>
@@ -133,7 +133,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">8. Indemnification</h2>
               <p>
-                You agree to indemnify, defend, and hold harmless NayaVed and its affiliates, officers, directors,
+                You agree to indemnify, defend, and hold harmless NayaVed AI and its affiliates, officers, directors,
                 employees, and agents from and against any claims, liabilities, damages, losses, costs, or expenses
                 (including reasonable attorneys' fees) arising out of or relating to:
               </p>
@@ -189,7 +189,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-[var(--ink-black)] mb-4">13. Entire Agreement</h2>
               <p>
-                These Terms, together with our Privacy Policy, constitute the entire agreement between you and NayaVed
+                These Terms, together with our Privacy Policy, constitute the entire agreement between you and NayaVed AI
                 regarding your use of the Services and supersede all prior agreements and understandings.
               </p>
             </section>
