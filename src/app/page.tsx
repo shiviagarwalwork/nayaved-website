@@ -34,7 +34,7 @@ export default function Home() {
   const [showDisclaimer, setShowDisclaimer] = useState(true);
 
   const tabs = [
-    { id: 'app' as Tab, label: 'AyuVed App', icon: Smartphone, description: 'AI-powered diagnostics' },
+    { id: 'app' as Tab, label: 'NayaVed App', icon: Smartphone, description: 'AI-powered diagnostics' },
     { id: 'about' as Tab, label: 'About', icon: Info, description: 'Our mission & vision' },
     { id: 'quick' as Tab, label: 'Quick Fix', icon: Zap, description: 'Symptom solutions' },
     { id: 'plan' as Tab, label: 'My Daily Plan', icon: CalendarCheck, description: 'Personalized schedule' },
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-5">
-              {/* AyuVed Lotus Logo */}
+              {/* NayaVed Lotus Logo */}
               <div className="relative">
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[var(--parchment-light)] to-[var(--parchment-dark)] border-2 border-[var(--gold-leaf)] flex items-center justify-center shadow-lg">
                   <LotusLogo className="text-[var(--copper-brown)]" size={44} />
@@ -85,7 +85,7 @@ export default function Home() {
 
               <div>
                 <h1 className="text-2xl md:text-4xl font-bold text-[var(--ink-black)] mb-1" style={{fontFamily: 'Georgia, serif'}}>
-                  AyuVed
+                  NayaVed
                 </h1>
                 <p className="text-[var(--copper-brown)] text-sm md:text-base font-medium">
                   Ancient Wisdom, Modern Wellness
@@ -205,7 +205,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--parchment-light)] to-white border border-[var(--gold-leaf)] flex items-center justify-center">
                   <LotusLogo className="text-[var(--copper-brown)]" size={28} />
                 </div>
-                <h3 className="text-lg font-bold text-[var(--ink-black)]" style={{fontFamily: 'Georgia, serif'}}>AyuVed</h3>
+                <h3 className="text-lg font-bold text-[var(--ink-black)]" style={{fontFamily: 'Georgia, serif'}}>NayaVed</h3>
               </div>
               <p className="text-sm text-[var(--ink-brown)] leading-relaxed">
                 Bridging ancient Charaka Samhita wisdom with modern AI technology.
@@ -265,7 +265,7 @@ export default function Home() {
                 <span className="text-[var(--faded-ink)] text-sm italic" style={{fontFamily: 'Georgia, serif'}}>Where Charaka Samhita meets AI</span>
               </div>
               <p className="text-sm text-[var(--faded-ink)] text-center md:text-right">
-                &copy; 2024 AyuVed
+                &copy; 2024 NayaVed
                 <span className="mx-2">•</span>
                 <span className="italic">Ancient wisdom, modern wellness</span>
               </p>
