@@ -400,6 +400,21 @@ small, .text-muted {
   100% { transform: rotate(360deg); }
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
 /* Markdown Content Styling */
 .markdown-content h1 {
   font-size: 1.75em;

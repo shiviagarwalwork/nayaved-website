@@ -1,7 +1,7 @@
 # Claude Code Context Memory
-**Project:** Ayurveda Knowledge Portal
-**Session Counter:** 2
-**Last Updated:** 2026-01-20
+**Project:** Ayurveda Knowledge Portal (NayaVed Website)
+**Session Counter:** 3
+**Last Updated:** 2026-01-27
 **Next Consolidation:** Session 15
 
 ---
@@ -117,6 +117,25 @@ Key files:
 - Next.js cache issues (resolved with `rm -rf .next`)
 - Overly academic blog tone (simplified for accessibility)
 
+### Session 3 (2026-01-27) - Website App Funnel & Marketing
+**Work Completed:**
+- Updated `AppShowcase.tsx` - Changed "Coming Soon" buttons to real App Store/Play Store links
+- Created `FloatingAppBanner.tsx` - Floating download banner appears after scrolling 300px
+- Updated `page.tsx` - Added FloatingAppBanner, expanded footer to 4 columns with "Get the App" section
+- Updated `QuickStart.tsx` - Added app download CTA at bottom of symptom browser
+- Updated `globals.css` - Added slideUp animation for floating banner
+
+**Files Modified:**
+- src/components/AppShowcase.tsx (updated download buttons)
+- src/components/FloatingAppBanner.tsx (new file)
+- src/components/QuickStart.tsx (added app CTA)
+- src/app/page.tsx (added FloatingAppBanner, updated footer)
+- src/app/globals.css (added slideUp animation)
+
+**App Store Links (Update when published):**
+- iOS: https://apps.apple.com/app/nayaved-ai
+- Android: https://play.google.com/store/apps/details?id=com.nayaved.app
+
 ### Session 2 (2026-01-20) - AyuVed Mobile App Showcase Integration
 **Work Completed:**
 - Created `AppShowcase.tsx` component to showcase the AyuVed mobile app
@@ -142,7 +161,9 @@ Key files:
 ## 🎯 NEXT PRIORITIES
 
 ### High Priority - Mobile App Integration
-1. **Update download links** - Add real App Store/Play Store links when app is published
+1. **Update download links** - Replace placeholder URLs with real App Store/Play Store links when published
+   - Current iOS: https://apps.apple.com/app/nayaved-ai
+   - Current Android: https://play.google.com/store/apps/details?id=com.nayaved.app
 2. **Add app screenshots** - Replace phone mockup with real app screenshots
 3. **Deep linking** - Link website features to corresponding app screens
 4. **QR code** - Add QR code for easy app download
